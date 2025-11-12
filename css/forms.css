@@ -1,0 +1,83 @@
+@import url('variaveis.css');
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container .card{
+    width: 40%;
+    min-width: 350px;
+    margin: 0 auto;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow: 5px 5px 8px #d3d3d371,
+                -5px -5px 8px #a8a8a87c;
+
+    & h1 {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    & .row form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & .row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            & input {
+                border: 1px solid var(--cinza-claro);
+                border-radius: 12px;
+                height: 35px;
+                outline: none;
+                padding-left: 8px;
+                color: var(--cinza-escuro);
+                font-size: .9rem;
+            }
+
+            & button[type=submit] {
+                border: none;
+                background-color: var(--azul);
+                color: var(--branco);
+                font-weight: bold;
+                height: 40px;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all .5s ease;
+            }
+
+            & button[type=submit]:hover {
+                background-color: var(--azul-escuro);
+            }
+        }
+
+        & .particao {
+            flex-direction: row;
+            gap: 15px;
+
+            & div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    }
+
+    /* 
+        Coloquei a formatação aqui porque devido ao escopo,
+        não foi possível colocar no bloco acima
+    */
+    & .mensagemCadastrar p {
+        color: var(--cinza-mediano);
+        font-size: .8rem;
+        text-align: center;
+    }
+}
