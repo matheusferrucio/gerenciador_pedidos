@@ -6,10 +6,14 @@
     font-size: 18px;
 }
 
+body {
+    background-color: #f2f2f2;
+}
+
 /* Formatação padrão do container */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 

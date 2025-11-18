@@ -35,11 +35,15 @@
                         <label for="senhaUsuario">Senha</label>
                         <input type="password" name="senhaUsuario" required>
                     </div>
-                    <div class="row mensagemCadastrar">
-                        <p>Já possui cadastro? <a href="../../index.php" class="realce">Entre na sua conta.</a></p>
+                    <div class="row row_lembrar_me">
+                        <input type="checkbox" name="lembrar_me" class="input_chekcbox">
+                        <label for="lembrar_me">Lembrar-me</label>
                     </div>
                     <div class="row">
                         <button type="submit" class="btnLogin">Cadastrar</button>
+                    </div>
+                    <div class="row mensagemCadastrar">
+                        <p>Já possui cadastro? <a href="../../index.php" class="realce">Entre na sua conta.</a></p>
                     </div>
                 </form>
             </div>

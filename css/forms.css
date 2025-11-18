@@ -7,14 +7,13 @@ body {
 }
 
 .container .card{
+    background-color: var(--branco);
     width: 40%;
     min-width: 350px;
     margin: 0 auto;
     border: 1px solid var(--cinza-claro);
     border-radius: 22px;
     padding: 20px;
-    box-shadow: 5px 5px 8px #d3d3d371,
-                -5px -5px 8px #a8a8a87c;
 
     & h1 {
         margin-bottom: 35px;
@@ -56,6 +55,18 @@ body {
             & button[type=submit]:hover {
                 background-color: var(--azul-escuro);
             }
+        }
+
+        & .row_lembrar_me {
+            flex-direction: row;
+            font-size: .9rem;
+            align-items: center;
+            color: var(--cinza-mediano);
+
+        }
+        
+        & .row_lembrar_me input.input_chekcbox {
+            width: 18px;
         }
 
         & .particao {

@@ -27,10 +27,14 @@
                 ":cpf"          => $cpf_usuario,
                 "nome_usuario"  => $nome_usuario,
                 ":email"        => $email_usuario,
-                ":senha"        => $senha_usuario
+                ":senha"        => password_hash($senha_usuario, PASSWORD_DEFAULT)
             ));
 
             if($query->rowCount() > 0){
+                session_start();
+
+                $_SESSION['usuario'] = $linha["cpf"];
+
                 header("location:../front/home.php");
                 exit();
             }

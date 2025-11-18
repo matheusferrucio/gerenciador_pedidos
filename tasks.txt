@@ -1,0 +1,9 @@
+*** Tarefas para fazer no sistema ***
+
+- Criar o banco de dados OK
+- Criar as telas de login e cadastro OK
+- Criar a sidebar EM ANDAMENTO
+- Criar modal de login/cadastro realizado com sucesso A FAZER
+- Implementar SESSION no sistema A FAZER
+- Aplicar responsividade nas telas de login e cadastro A FAZER
+- Aplicar funcionalidade de abrir e fechar na sidebar A FAZER
