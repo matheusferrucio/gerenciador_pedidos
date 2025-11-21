@@ -24,7 +24,7 @@
         <?php require_once("sidebar.php"); ?>
 
         <main class="conteudo_principal">
-            <h1>Conteúdo principal</h1>
+            
         </main>
     </div>
 </body>

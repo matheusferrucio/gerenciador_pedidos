@@ -1,170 +1,189 @@
-@import url("variaveis.css");
+@import url('variaveis.css');
 
-aside {
-    position: absolute;
+nav.sidebar {
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 20%;
-    height: 100vh;
-    background-color: var(--branco);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 15px;
-    /* overflow: hidden; */
-    transition: all .5s ease;
+    width: 250px;
+    height: 100%;
+    padding: 15px;
+    background-color: var(--sidebar);
+    transition: var(--trans04);
+    z-index: 2;
 
-    
-    & .logo_sidebar {
+    /* Formatação da logo título e btn de fechar sidebar */
+    & .logo {
+        position: relative;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
-        padding: 8px 0;
 
-        /* div que engloba a imagem e texto da logo */
-        & .logo {
-            display: flex;
-            gap: 10px;
-            align-items: flex-end;
-        }
-        
         & img {
             width: 55px;
         }
 
-        & h2 {
-            color: var(--azul);
-            font-size: 1.3rem;
+        & .nome_sistema {
+            width: calc(100% - 65px);
+            transition: var(--trans02);
+            white-space: nowrap;
+
+            & h1 {
+                color: var(--realce);
+                font-size: 1.3rem;
+            }
         }
 
-        /* 
-            Aqui estou criando o botão de esconder sidebar
-            porque não encontrei nenhum ícone que me agradasse
-        */
-        & .frame_btn_sidebar {
-            height: 100%;
-            width: 20px;
+        & .btn_sidebar {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: var(--realce);
+            color: var(--sidebar);
+            font-size: 1.3rem;
+            cursor: pointer;
+            right: -30px;
+            transform: rotate(180deg);
+
             display: flex;
             align-items: center;
-            cursor: pointer;
-            position: relative;
-
-            & .btn_toggle_sidebar {
-                width: 100%;
-                height: 17px;
-                border-radius: 5px;
-                border: 2px solid var(--cinza-mediano);
-                display: flex;
-                transition: all .2s ease;
-
-                & div {
-                    height: 100%;
-                    width: 35%;
-                    border-right: 2px solid var(--cinza-mediano );
-                    background-color: var(--cinza-mediano);
-                    transition: all .2s ease;
-                }
-            }
-
-            /* dica ao passar o mouse sobre o botão de fechar sidebar */
-            & span.tool_tip {
-                position: absolute;
-                background-color: var(--branco);
-                border: 1px solid var(--cinza-claro);
-                color: var(--cinza-escuro);
-                font-size: .8rem;
-                padding: 7px;
-                border-radius: 5px;
-                width: max-content;
-                z-index: 1;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 130%;
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity .3s ease;
-            }
-
-            /* 
-                Hover do botão de esconder sidebar
-            */
-            & .btn_toggle_sidebar:hover {
-                border-color: var(--azul);
-
-                & div {
-                    background-color: var(--azul);
-                    border-color: var(--azul);
-                }
-
-                & span.tool_tip {
-                    visibility: visible;
-                    opacity: 1;
-                }
-            }
+            justify-content: center;
+            transition: var(--trans02);
         }
     }
 
-    & nav.botoes_sidebar {
+    & .navigation_buttons {
+        height: calc(100% - 85px);
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        justify-content: space-between;
+    }
 
-        & p.titulo_sessao_nav {
-            font-size: .9rem;
-            color: #9b9b9b;
-            border-bottom: 1px solid var(--cinza-claro);
-            padding-bottom: 8px;
+    /* Formatação da lista de botões */
+    & .navigation_buttons ul li a {
+        height: 45px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        color: var(--texto);
+        font-size: 1rem;
+        margin-top: 12px;
+        transition: var(--trans02);
+        
+        & i {
+            text-align: center;
+            font-size: 1.3rem;
+            width: 55px;
         }
 
-        & .row ul.lista_botoes_sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+        & span {
+            width: calc(100% - 55px);
         }
+    }
 
-        & .row ul.lista_botoes_sidebar li a {
-            padding: 8px;
-            border-radius: 12px;
-            height: 35px;
+    & .navigation_buttons ul li a:hover {
+        background-color: var(--realce);
+        color: var(--sidebar);
 
+        & i {
+            color: var(--sidebar);
+        }
+    }
+
+    & .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        background-color: var(--main);
+        height: 50px;
+        padding: 5px;
+
+        /* formatação do card de perfil na parte inferior da sidebar */
+        & a.nav_btn {
             display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--cinza-escuro);
-            transition: all .2s ease-in-out;
+            width: calc(100% - 45px);
+            transition: var(--trans02);
 
-            & i {
-                width: 25px;
-                font-size: 1.4rem;
+            & .img_perfil {
+                width: 45px;
+                height: 45px;
+                border-radius: 12px;
+                background-color: var(--realce);
+                object-fit: cover;
             }
-        }
 
-        & .row ul.lista_botoes_sidebar li a:hover {
-            background-color: var(--azul);
-            color: var(--branco);
-        }
+            & .nome_cargo {
+                width: calc(100% - 45px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 10px;
+                color: var(--texto);
 
-        & .row ul.lista_botoes_sidebar li a:hover .icon_dashboard div {
-            background-color: var(--branco);
+                & .nome_perfil {
+                    font-weight: 1rem;
+                    font-weight: 500;
+                    white-space: nowrap;
+                }
+                
+                & .cargo_perfil {
+                    font-weight: 300;
+                    font-size: .7rem;
+                    white-space: nowrap;
+                }
+            }
+
         }
         
-        /* 
-            eu criei esse ícone de dashboard porque não
-            encontrei um ícone que me agradasse
-        */
-        & .icon_dashboard {
-            width: 25px;
-            height: 25px;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            cursor: pointer;
-
-            & div {
-                width: 85%;
-                height: 85%;
-                background-color: var(--cinza-escuro);
-                border-radius: 3px;
-                transition: all .2s ease-in-out;
+        /* formatação do botão de sair da conta */
+        & .exit_btn {
+            width: 45px;
+            height: 45px;
+            background-color: var(--sidebar);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--trans02);
+            z-index: 3;
+            
+            & i {
+                font-size: 1.2rem;
+                color: var(--texto);
+                transition: var(--trans02);
             }
         }
+
+        & .exit_btn:hover {
+            background-color: var(--realce);
+
+            & i {
+                color: var(--sidebar);
+            }
+        }
+    }
+}
+
+nav.sidebar.open {
+    width: 55px;
+
+    & .nome_sistema {
+        opacity: 0;
+        white-space: nowrap;
+    }
+
+    & .btn_sidebar {
+        transform: rotate(0);
+    }
+
+    & .navigation_buttons ul li a span {
+        opacity: 0;
+        white-space: nowrap;
+    }
+
+    & a.nav_btn.btn_perfil {
+        opacity: 0;
     }
 }

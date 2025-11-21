@@ -7,13 +7,15 @@
 }
 
 body {
+    height: 100vh;
     background-color: #f2f2f2;
 }
 
 /* Formatação padrão do container */
 .container {
     width: 100%;
-    max-width: 1300px;
+    height: 100%;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -34,4 +36,26 @@ p {
 .realce {
     font-weight: bold;
     color: var(--azul);
+}
+
+/* 
+    Esses 310px que estou calculando na largura é referente a
+    280px de largura da sidebar(width + padding de 15px pra cada lado)
+    30px de padding do conteúdo principal(15px de cada lado)
+*/
+main.conteudo_principal {
+    position: relative;
+    width: calc(100% - 325px);
+    top: 0;
+    right: 0;
+    left: 280px;
+    height: calc(100% - 30px);
+    padding: 15px 15px 15px 30px;
+    background-color: var(--main);
+    transition: var(--trans04);
+}
+
+main.conteudo_principal.extend {
+    width: calc(100% - 240px);
+    left: 85px;
 }

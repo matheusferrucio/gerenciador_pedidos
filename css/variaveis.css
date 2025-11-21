@@ -1,8 +1,13 @@
 :root {
-    --azul: #1055C9;
-    --azul-escuro: #0c419c;
-    --branco: #f7f7f7;
-    --cinza-escuro: #242424;
-    --cinza-mediano: #616161;
-    --cinza-claro: #cacaca;
+    /* cores do site */
+    --sidebar: #fafafa;
+    --main: #f2f2f2;
+    --texto: #6d6d6d;
+    --realce: #1055c9;
+
+    /* transições  */
+    --trans02: .2s ease;
+    --trans03: .3s ease;
+    --trans04: .4s ease;
+    --trans05: .5s ease;
 }
