@@ -1,0 +1,96 @@
+@import url('variaveis.css');
+
+header {
+    width: 100%;
+    margin-bottom: 25px;
+
+    & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 160px;
+        height: 35px;
+        background-color: var(--realce);
+        color: var(--texto-branco);
+        font-size: .9rem;
+        border-radius: 12px;
+        transition: var(--trans02);
+    }
+    
+    & a:hover {
+        background-color: var(--realce2);
+    }
+}
+
+section.lista_pedidos .frame_pedidos {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & .card_pedido {
+        width: 100%;
+        height: 70px;
+        border: 1px solid var(--borda-card);
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        transition: var(--trans02);
+        cursor: pointer;
+        background-color: var(--sidebar);
+
+        & .borda_lateral {
+            position: absolute;
+            width: 15px;
+            height: 100%;
+            left: 0;
+            background-color: transparent;
+        }
+
+        & .conteudo_card_pedido {
+            width: calc(100% - 36px);
+            height: 100%;
+            margin-left: 15px;
+            display: flex;
+            padding: 0 10px;
+
+            & .informacao {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+                flex: 1;
+
+                & .sub_titulo {
+                    font-size: .7rem;
+                    color: var(--texto);
+                }
+
+                & .inf_titulo {
+                   color: var(--texto2); 
+                   text-transform: uppercase;
+                }
+            }
+
+            & .informacao.oficina {
+                flex: 2;
+            }
+        }
+    }
+
+    & .card_pedido:hover {
+        border-color: var(--realce);
+    }
+
+    & .card_pedido.cilia .borda_lateral {
+        background-color: var(--cilia);
+    }
+
+    & .card_pedido.soma_pecas .borda_lateral {
+        background-color: var(--soma-pecas);
+    }
+    & .card_pedido.prismatec .borda_lateral {
+        background-color: var(--prismatec);
+    }
+}

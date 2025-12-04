@@ -1,0 +1,103 @@
+@import url('variaveis.css');
+
+main form.form_cadastro_pedido {
+    width: calc(100% - 30px);
+    background-color: var(--sidebar);
+    padding: 15px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .row {
+        display: flex;
+        gap: 15px;
+
+        & .particao {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            & label {
+                color: var(--texto2);
+                font-size: 1rem;
+            }
+
+            & input,
+            select,
+            label.label_input_file {
+                height: 40px;
+                padding-left: 8px;
+                font-size: .9rem;
+                border: 1px solid var(--borda-card);
+                outline: none;
+                border-radius: 12px;
+                background: none;
+                color: var(--texto2);
+            }
+
+            /* 
+                Formatação do label que "substitui
+                o input file
+            */
+            & label.label_input_file {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                font-size: 1.1rem;
+                color: var(--texto-branco);
+                background-color: var(--realce);
+                cursor: pointer;
+                border: none;
+                transition: var(--trans02);
+            }
+
+            & label.label_input_file:hover {
+                background-color: var(--realce2);
+            }
+        }
+    }
+
+    & .row:last-of-type {
+        justify-content: center;
+
+        & button,
+        a.btnVoltar {
+            border: none;
+            border-radius: 12px;
+            background-color: var(--main);
+            padding: 8px 12px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--trans03);
+        }
+
+        & button.btnCadastrar {
+            background-color: var(--realce);
+            color: var(--texto-branco);
+        }
+        & button.btnCadastrar:hover {
+            background-color: var(--realce2);
+        }
+
+        & a.btnVoltar {
+            color: var(--texto);
+            display: flex;
+            align-items: center;
+        }
+        & a.btnVoltar:hover {
+            background-color: var(--borda-card);
+        }
+    }
+}
+
+/* 
+    Escondi o input para formatar o label
+*/
+input[type=file] {
+    display: none;
+}

@@ -6,12 +6,18 @@ body {
     align-items: center;
 }
 
-.container .card{
-    background-color: var(--branco);
+body .container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+body div.container .card {
+    background-color: var(--sidebar);
     width: 40%;
     min-width: 350px;
     margin: 0 auto;
-    border: 1px solid var(--cinza-claro);
+    border: 1px solid var(--borda-card);
     border-radius: 22px;
     padding: 20px;
 
@@ -32,7 +38,7 @@ body {
             gap: 5px;
 
             & input {
-                border: 1px solid var(--cinza-claro);
+                border: 1px solid var(--borda-input);
                 border-radius: 12px;
                 height: 35px;
                 outline: none;
@@ -43,8 +49,8 @@ body {
 
             & button[type=submit] {
                 border: none;
-                background-color: var(--azul);
-                color: var(--branco);
+                background-color: var(--realce);
+                color: var(--texto-branco);
                 font-weight: bold;
                 height: 40px;
                 border-radius: 12px;
@@ -53,20 +59,8 @@ body {
             }
 
             & button[type=submit]:hover {
-                background-color: var(--azul-escuro);
+                background-color: var(--realce2);
             }
-        }
-
-        & .row_lembrar_me {
-            flex-direction: row;
-            font-size: .9rem;
-            align-items: center;
-            color: var(--cinza-mediano);
-
-        }
-        
-        & .row_lembrar_me input.input_chekcbox {
-            width: 18px;
         }
 
         & .particao {

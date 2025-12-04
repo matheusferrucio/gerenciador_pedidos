@@ -3,7 +3,16 @@
     --sidebar: #fafafa;
     --main: #f2f2f2;
     --texto: #6d6d6d;
+    --texto2: #252525;
+    --borda-card: #d3d3d3;
+    --borda-input: #a1a1a1;
     --realce: #1055c9;
+    --realce2: #0d48ad;
+    --texto-branco: #fcf9f9;
+
+    --cilia: #e7eb18;
+    --soma-pecas: #1862eb;
+    --prismatec: #9e18eb;
 
     /* transições  */
     --trans02: .2s ease;

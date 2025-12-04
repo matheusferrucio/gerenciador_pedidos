@@ -35,10 +35,6 @@
                         <label for="senhaUsuario">Senha</label>
                         <input type="password" name="senhaUsuario" required>
                     </div>
-                    <div class="row row_lembrar_me">
-                        <input type="checkbox" name="lembrar_me" class="input_chekcbox">
-                        <label for="lembrar_me">Lembrar-me</label>
-                    </div>
                     <div class="row">
                         <button type="submit" class="btnLogin">Cadastrar</button>
                     </div>

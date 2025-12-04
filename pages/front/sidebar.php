@@ -1,11 +1,3 @@
-<head>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/sidebar.css">
-    <script src="../../js/sidebar.js" defer></script>
-</head>
-
 <nav class="sidebar">
     <div class="logo">
         <img src="../../images/logo.png" alt="logo">
@@ -27,13 +19,13 @@
                 </a>
             </li>
             <li>
-                <a href="pedidos.php" class="nav_btn">
+                <a href="lista_pedidos.php" class="nav_btn">
                     <i class='bx bx-receipt'></i>
                     <span class="texto">Pedidos</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav_btn">
+                <a href="./lista_seguradoras.php" class="nav_btn">
                     <i class='bx bx-shield'></i>
                     <span class="texto">Seguradoras</span>
                 </a>

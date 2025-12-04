@@ -28,6 +28,11 @@ h1 {
     color: var(--azul);
 }
 
+.titulo_sessao {
+    color: var(--texto2);
+    font-size: 1.5rem;
+}
+
 p {
     font-size: 1rem;
     color: var(--cinza-escuro);
@@ -35,7 +40,11 @@ p {
 
 .realce {
     font-weight: bold;
-    color: var(--azul);
+    color: var(--realce);
+}
+
+.bold {
+    font-weight: 500;
 }
 
 /* 
@@ -56,6 +65,6 @@ main.conteudo_principal {
 }
 
 main.conteudo_principal.extend {
-    width: calc(100% - 240px);
+    width: calc(100% - 130px);
     left: 85px;
 }
