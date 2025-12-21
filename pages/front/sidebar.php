@@ -1,6 +1,10 @@
+<?php
+    require_once(__DIR__.'/../back/config.php');
+?>
+
 <nav class="sidebar">
     <div class="logo">
-        <img src="../../images/logo.png" alt="logo">
+        <img src="<?= BASE_URL; ?>images/logo.png" alt="logo">
 
         <div class="nome_sistema">
             <h1 class="titulo">Gerenciador <br>de pedidos</h1>
@@ -13,25 +17,25 @@
     <div class="navigation_buttons">
         <ul class="list_buttons">
             <li>
-                <a href="home.php" class="nav_btn">
+                <a href="<?= BASE_URL; ?>pages/front/home.php" class="nav_btn">
                     <i class='bx bx-home'></i>
                     <span class="texto">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="lista_pedidos.php" class="nav_btn">
+                <a href="<?= BASE_URL; ?>pages/front/listas/lista_pedidos.php" class="nav_btn">
                     <i class='bx bx-receipt'></i>
                     <span class="texto">Pedidos</span>
                 </a>
             </li>
             <li>
-                <a href="./lista_seguradoras.php" class="nav_btn">
+                <a href="<?= BASE_URL; ?>pages/front/listas/lista_seguradoras.php" class="nav_btn">
                     <i class='bx bx-shield'></i>
                     <span class="texto">Seguradoras</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav_btn">
+                <a href="<?= BASE_URL; ?>pages/front/listas/lista_oficinas.php" class="nav_btn">
                     <i class='bx bx-cog'></i>
                     <span class="texto">Oficinas</span>
                 </a>
@@ -39,9 +43,9 @@
         </ul>
 
         <div class="perfil">
-            <a href="#" class="nav_btn btn_perfil">
+            <a href="<?= BASE_URL; ?>" class="nav_btn btn_perfil">
                 <div class="frame_img_perfil">
-                    <img src="../../images/img_perfil.jpeg" alt="" class="img_perfil">
+                    <img src="<?= BASE_URL; ?>images/img_perfil.jpeg" alt="" class="img_perfil">
                 </div>
                 <div class="nome_cargo">
                     <span class="texto nome_perfil">Matheus</span>

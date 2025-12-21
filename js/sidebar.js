@@ -31,7 +31,7 @@ sidebarBtn.addEventListener('click', (e)=>{
     if (main){
         main.classList.toggle('extend');
     }
-
+    
     // armazena se sidebar está aberta ou fechada
     if (sidebar.classList.contains('open')) {
         localStorage.setItem('sidebarStatus', 'closed');

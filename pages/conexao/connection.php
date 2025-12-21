@@ -11,6 +11,6 @@
         ]);
     } catch (PDOException $erro) {
         echo("Erro ao conectar com o banco de dados");
-        exit;
+        exit();
     }
 ?>

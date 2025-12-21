@@ -1,7 +1,7 @@
 <?php
-    require_once(__DIR__.'/../back/config.php');
+    require_once(__DIR__."/../../back/_session.php");
 
-    require_once(__DIR__.'/../back/_session.php');
+    require_once(__DIR__."/../../back/config.php");
 
     if(!isset($_SESSION['usuario'])){
         header("location:".BASE_URL."index.php");
@@ -20,15 +20,16 @@
     <link rel="stylesheet" href="<?= BASE_URL; ?>css/reset.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>css/style.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>css/sidebar.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>css/lista_oficinas.css">
     <script src="<?= BASE_URL; ?>js/sidebar.js" defer></script>
     <script src="<?= BASE_URL; ?>js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <?php require_once("sidebar.php"); ?>
+        <?php require_once(__DIR__."/../sidebar.php"); ?>
 
         <main class="conteudo_principal">
-            <h1>Conteúdo principal</h1>
+            
         </main>
     </div>
 </body>

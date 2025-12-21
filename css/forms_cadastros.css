@@ -10,6 +10,21 @@ main form.form_cadastro_pedido {
     flex-direction: column;
     gap: 20px;
 
+    /* 
+        Formatação do subtítulo de cada sessão
+        do formulário para separar as informações
+    */
+    & .subtitulo_content {
+        border-bottom: 1px solid var(--borda-card);
+        padding-bottom: 8px;
+        opacity: .7;
+
+        & h2 {
+            font-size: .8rem;
+            color: var(--texto);
+        }
+    }
+
     & .row {
         display: flex;
         gap: 15px;
@@ -23,19 +38,40 @@ main form.form_cadastro_pedido {
             & label {
                 color: var(--texto2);
                 font-size: 1rem;
+
+                /* 
+                    Formatação dos asteriscos onde é
+                    obrigatório preencher o campo
+                */
+                & span.obrigatorio {
+                    font-size: .8rem;
+                    color: red;
+                    padding: 0 3px;
+                }
             }
 
             & input,
             select,
             label.label_input_file {
                 height: 40px;
-                padding-left: 8px;
+                padding: 0 8px;
                 font-size: .9rem;
                 border: 1px solid var(--borda-card);
                 outline: none;
                 border-radius: 12px;
                 background: none;
                 color: var(--texto2);
+            }
+
+            & input:focus,
+            select:focus {
+                border-color: var(--realce);
+            }
+
+            & select option {
+                color: var(--texto);
+                border-radius: 12px;
+                font-size: .9rem;
             }
 
             /* 
