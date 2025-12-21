@@ -1,12 +1,15 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        require_once(__DIR__.'/../config.php');
+        
         $cpf_usuario   = filter_input(INPUT_POST, 'cpfUsuario', FILTER_SANITIZE_SPECIAL_CHARS);
         $nome_usuario  = filter_input(INPUT_POST, 'nomeUsuario', FILTER_SANITIZE_SPECIAL_CHARS);
         $email_usuario = filter_input(INPUT_POST, 'emailUsuario', FILTER_SANITIZE_EMAIL);
         $senha_usuario = filter_input(INPUT_POST, 'senhaUsuario', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         try {
-            require_once("../conexao/connection.php");
+            require_once(__DIR__."/../../conexao/connection.php");
 
             $query = $conexao->prepare(
                 "INSERT INTO usuarios (
@@ -35,7 +38,7 @@
 
                 $_SESSION['usuario'] = $linha["cpf"];
 
-                header("location:../front/home.php");
+                header("location:".BASE_URL."pages/front/home.php");
                 exit();
             }
             else {

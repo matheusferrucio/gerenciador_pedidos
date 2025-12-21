@@ -30,7 +30,7 @@
         <?php require_once(__DIR__."/../sidebar.php"); ?>
 
         <main class="conteudo_principal">
-            <form action="<?= BASE_URL; ?>pages/back/cadastrar_seguradoradb.php" class="form_cadastro_pedido" method="POST" enctype="multipart/form-data">
+            <form action="<?= BASE_URL; ?>pages/back/cadastros/cadastrar_seguradoradb.php" class="form_cadastro_pedido" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <h1 class="titulo_sessao">Cadastro de seguradora</h1>
                 </div>

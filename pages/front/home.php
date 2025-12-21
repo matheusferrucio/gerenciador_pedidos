@@ -1,7 +1,7 @@
 <?php
-    require_once(__DIR__.'/../back/config.php');
-
     require_once(__DIR__.'/../back/_session.php');
+    
+    require_once(__DIR__.'/../back/config.php');
 
     if(!isset($_SESSION['usuario'])){
         header("location:".BASE_URL."index.php");

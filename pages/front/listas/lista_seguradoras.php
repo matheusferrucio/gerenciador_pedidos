@@ -43,7 +43,7 @@
                 </div>
                 <div class="row frame_seguradoras">
                     <?php
-                        require_once(__DIR__."/../../back/seguradoras_viewdb.php");
+                        require_once(__DIR__."/../../back/listas/lista_seguradorasdb.php");
 
                         if($qtdTotalRegistros > 0) {
                             foreach($dados as $linha) {

@@ -53,7 +53,7 @@
                 </div>
             </a>
 
-            <a href="#" class="exit_btn">
+            <a href="<?= BASE_URL; ?>pages/back/exit.php" class="exit_btn">
                 <i class='bx bx-exit'></i>
             </a>
         </div>

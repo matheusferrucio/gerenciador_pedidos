@@ -41,7 +41,7 @@
                 </div>
                     <div class="row frame_oficinas">
                     <?php
-                        require_once(__DIR__."/../../back/oficinas_viewdb.php");
+                        require_once(__DIR__."/../../back/listas/lista_oficinasdb.php");
 
                         if($qtdTotalRegistros > 0) {
                             foreach($dados as $linha) {

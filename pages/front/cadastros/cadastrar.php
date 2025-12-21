@@ -27,7 +27,7 @@
                 <h1>Cadastre sua conta</h1>
             </div>
             <div class="row">
-                <form action="../../back/cadastrardb.php" method="POST">
+                <form action="<?= BASE_URL; ?>pages/back/cadastros/cadastrardb.php" method="POST">
                     <div class="row particao">
                         <div>
                             <label for="cpfUsuario">Digite seu CPF</label>

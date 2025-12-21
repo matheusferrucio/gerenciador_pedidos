@@ -1,3 +1,0 @@
-<?php
-    $qtdTotalRegistros = 0;
-?>
