@@ -3,7 +3,7 @@
     // e utilizar no meu select de cadastro
     function nomesSeguradorasView($conexao) {
         try {
-            $query = "SELECT * FROM seguradoras";
+            $query = "SELECT * FROM seguradoras ORDER BY nome_seguradora ASC";
 
             $dadosSelecionados = $conexao->query($query);
 

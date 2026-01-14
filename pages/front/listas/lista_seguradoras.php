@@ -54,6 +54,20 @@
                         <img src="<?= BASE_URL; ?>uploads/<?= $linha['foto_seguradora']; ?>" alt="">
                         <h2 class="nomeSeguradora"><?= $linha['nome_seguradora']; ?></h2>
                         <span class="cnpjSeguradora"><span class="bold">CNPJ: </span> <span class="cnpj"><?= $linha['cnpj']; ?></span></span>
+
+                        <div class="row linha_botoes">
+                            <a
+                                href="<?= BASE_URL; ?>pages/front/edits/edit_seguradora.php?id=<?= $linha['id_seguradora']; ?>" 
+                                class="btn editar">
+                                Editar
+                            </a>
+
+                            <a 
+                                href="<?= BASE_URL; ?>pages/front/excluir/excluir_seguradora.php?id=<?= $linha['id_seguradora']; ?>" 
+                                class="btn excluir">
+                                Excluir
+                            </a>
+                        </div>
                     </div>
 
                     <?php

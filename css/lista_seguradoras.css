@@ -57,6 +57,45 @@ section.lista_seguradoras .frame_seguradoras {
             color: var(--texto);
             font-size: .9rem;
         }
+
+        & .linha_botoes {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        & a.btn {
+            text-decoration: none;
+            color: var(--texto);
+            font-size: 1rem;
+            height: 30px;
+            width: 40%;
+            border: 2px solid var(--texto);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--trans02);
+        }
+
+        & a.btn.editar {
+            border-color: var(--realce);
+            color: var(--realce);
+        }
+        & a.btn.editar:hover {
+            background-color: var(--realce);
+            color: var(--texto-branco);
+        }
+
+        & a.btn.excluir {
+            border-color: var(--vermelho);
+            color: var(--vermelho);
+        }
+        & a.btn.excluir:hover {
+            background-color: var(--vermelho);
+            color: var(--texto-branco);
+        }
     }
 
     & .card_seguradora:hover {

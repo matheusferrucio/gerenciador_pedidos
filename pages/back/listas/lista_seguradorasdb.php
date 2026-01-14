@@ -2,7 +2,7 @@
     require_once(__DIR__."/../../conexao/connection.php");
 
     try {
-        $query = "SELECT * FROM seguradoras";
+        $query = "SELECT * FROM seguradoras ORDER BY nome_seguradora ASC";
 
         $dadosSelecionados = $conexao->query($query);
 

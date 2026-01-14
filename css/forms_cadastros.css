@@ -112,11 +112,13 @@ main form.form_cadastro_pedido {
             transition: var(--trans03);
         }
 
-        & button.btnCadastrar {
+        & button.btnCadastrar,
+        button.btnConfirmar {
             background-color: var(--realce);
             color: var(--texto-branco);
         }
-        & button.btnCadastrar:hover {
+        & button.btnCadastrar:hover,
+        button.btnConfirmar:hover {
             background-color: var(--realce2);
         }
 
