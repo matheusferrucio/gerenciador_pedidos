@@ -28,18 +28,25 @@
 </head>
 <body>
     <div class="container">
-        <?php require_once(__DIR__."/../sidebar.php"); ?>
+        <?php 
+            require_once(__DIR__."/../sidebar.php"); 
+            
+            require_once(__DIR__."/../../back/views/view_seguradoradb.php");
+        ?>
 
         <main class="conteudo_principal">
-            <form action="<?= BASE_URL; ?>pages/back/cadastros/cadastrar_seguradoradb.php" class="form_cadastro_pedido" method="POST" enctype="multipart/form-data">
+            <form action="<?= BASE_URL; ?>pages/back/edits/edit_seguradoradb.php" class="form_cadastro_pedido" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <h1 class="titulo_sessao">Cadastro de seguradora</h1>
                 </div>
 
                 <div class="row">
+                    <input type="hidden" name="id" value="<?= $dados['id_seguradora']; ?>">
+                    <input type="hidden" name="fotoAnterior" value="<?= $dados['foto_seguradora']; ?>">
+
                     <div class="particao">
                         <label for="nomeSeguradora">Nome da seguradora</label>
-                        <input type="text" name="nomeSeguradora" id="nomeSeguradora" placeholder="">
+                        <input type="text" name="nomeSeguradora" id="nomeSeguradora" placeholder="" value="<?= $dados['nome_seguradora']; ?>">
                     </div>
 
                     <div class="particao">
@@ -51,16 +58,21 @@
                             placeholder="Ex: 00.000.000/0001-00" 
                             inputmode="numeric" 
                             maxlength="14"
+                            value="<?= $dados['cnpj']; ?>"
                         >
                     </div>
 
                     <div class="particao">
                         <label for="fotoSeguradora">Foto seguradora</label>
+
                         <label for="fotoSeguradora" class="label_input_file">
                             <i class='bx bx-image-add'></i>
                             Escolher foto
                         </label>
-                        <input type="file" name="fotoSeguradora" id="fotoSeguradora" placeholder="">
+
+                        <input  type="file" 
+                                name="fotoSeguradora" 
+                                id="fotoSeguradora">
                     </div>
                 </div>
 

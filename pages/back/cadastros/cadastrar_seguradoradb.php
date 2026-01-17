@@ -10,7 +10,7 @@
             // salva a foto na variável e adiciona um nome aleatório para evitar conflito
             $foto = uniqid(rand(), false)."-".basename($_FILES['fotoSeguradora']['name']);
 
-            $pasta = BASE_URL."uploads/";
+            $pasta = __DIR__."/../../../uploads/";
         } else {
             $foto = "sem_foto.jpg";
         }
@@ -38,7 +38,9 @@
             ));
 
             if ($query->rowCount() > 0) {
-                move_uploaded_file($_FILES['fotoSeguradora']['tmp_name'], $pasta.$foto);
+                if(move_uploaded_file($_FILES['fotoSeguradora']['tmp_name'], $pasta.$foto)) {
+                    echo 'foto guardada com sucesso';
+                }
 
                 header("Location:".BASE_URL."pages/front/listas/lista_seguradoras.php");
                 exit();

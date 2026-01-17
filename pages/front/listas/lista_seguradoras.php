@@ -25,6 +25,7 @@
     <script src="<?= BASE_URL; ?>js/sidebar.js" defer></script>
     <script src="<?= BASE_URL; ?>js/script.js" defer></script>
     <script src="<?= BASE_URL; ?>js/regex.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 <body>
     <div class="container">
@@ -63,8 +64,9 @@
                             </a>
 
                             <a 
-                                href="<?= BASE_URL; ?>pages/front/excluir/excluir_seguradora.php?id=<?= $linha['id_seguradora']; ?>" 
-                                class="btn excluir">
+                                href="<?= BASE_URL; ?>pages/back/excluir/excluir_seguradoradb.php?id=<?= $linha['id_seguradora']; ?>" 
+                                class="btn excluir"
+                                onclick="confirmarExclusao(event, '<?= $linha['nome_seguradora']; ?>')">
                                 Excluir
                             </a>
                         </div>
