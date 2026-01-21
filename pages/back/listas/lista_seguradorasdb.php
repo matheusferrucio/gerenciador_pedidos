@@ -6,7 +6,7 @@
 
         $dadosSelecionados = $conexao->query($query);
 
-        $dados = $dadosSelecionados->fetchAll();
+        $dados = $dadosSelecionados->fetchAll(PDO::FETCH_ASSOC);
 
         $qtdTotalRegistros = $dadosSelecionados->rowCount();
     } catch (PDOException $erro) {

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?= BASE_URL; ?>css/lista_oficinas.css">
     <script src="<?= BASE_URL; ?>js/sidebar.js" defer></script>
     <script src="<?= BASE_URL; ?>js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 <body>
     <div class="container">
@@ -35,7 +36,7 @@
                     Cadastrar oficina
                 </a>
             </header>
-            <section class="lista_oficina">
+            <section class="lista_oficinas">
                 <div class="row">
                     <h1 class="titulo_sessao">Lista de oficinas</h1>
                 </div>
@@ -43,15 +44,29 @@
                     <?php
                         require_once(__DIR__."/../../back/listas/lista_oficinasdb.php");
 
-                        if($qtdTotalRegistros > 0) {
+                        if ($qtdDadosSelecionados > 0) {
                             foreach($dados as $linha) {
                         
                     ?>
 
                     <div class="card_oficina">
-                        <img src="<?= BASE_URL; ?>uploads/<?= $linha['foto_seguradora']; ?>" alt="">
-                        <h2 class="nomeSeguradora"><?= $linha['nome_seguradora']; ?></h2>
-                        <span class="cnpjSeguradora"><span class="bold">CNPJ: </span> <span class="cnpj"><?= $linha['cnpj']; ?></span></span>
+                        <h2 class="nomeSeguradora"><?= $linha['nome_oficina']; ?></h2>
+                        <span class="cnpjOficina"><span class="bold">CNPJ: </span> <span class="cnpj"><?= $linha['cnpj']; ?></span></span>
+
+                        <div class="row linha_botoes">
+                            <a
+                                href="<?= BASE_URL; ?>pages/front/edits/edit_oficina.php?cnpj=<?= $linha['cnpj']; ?>" 
+                                class="btn editar">
+                                Editar
+                            </a>
+    
+                            <a 
+                                href="<?= BASE_URL; ?>pages/back/excluir/excluir_oficinadb.php?cnpj=<?= $linha['cnpj']; ?>" 
+                                class="btn excluir"
+                                onclick="confirmarExclusao(event, '<?= $linha['nome_oficina']; ?>')">
+                                Excluir
+                            </a>
+                        </div>
                     </div>
 
                     <?php

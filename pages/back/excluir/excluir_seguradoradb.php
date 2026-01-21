@@ -1,11 +1,11 @@
 <?php
+    require_once(__DIR__."/../../conexao/connection.php");
+
+    require_once(__DIR__."/../config.php");
+
     $id_seguradora = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     try {
-        require_once(__DIR__."/../../conexao/connection.php");
-
-        require_once(__DIR__."/../config.php");
-
         $query = $conexao->prepare("DELETE FROM seguradoras 
                                     WHERE seguradoras.id_seguradora = :id");
 

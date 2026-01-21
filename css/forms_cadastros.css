@@ -95,6 +95,10 @@ main form.form_cadastro_pedido {
                 background-color: var(--realce2);
             }
         }
+
+        & .particao.part2 {
+            flex: 2;
+        }
     }
 
     & .row:last-of-type {

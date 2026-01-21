@@ -42,9 +42,9 @@
             if ($query->rowCount() > 0) {
 
                 if ($flag) {
-                    unlink($pasta.$foto_anterior)
+                    unlink($pasta.$foto_anterior);
                     
-                    move_uploaded_file($_FILES["fotoSeguradora"]["tmp_name"], $pasta.$foto)
+                    move_uploaded_file($_FILES["fotoSeguradora"]["tmp_name"], $pasta.$foto);
                 }
 
                 header("Location:".BASE_URL."pages/front/listas/lista_seguradoras.php");

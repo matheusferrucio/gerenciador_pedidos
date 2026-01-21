@@ -37,7 +37,7 @@
         <main class="conteudo_principal">
             <form action="<?= BASE_URL; ?>pages/back/edits/edit_seguradoradb.php" class="form_cadastro_pedido" method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <h1 class="titulo_sessao">Cadastro de seguradora</h1>
+                    <h1 class="titulo_sessao">Editar cadastro de seguradora</h1>
                 </div>
 
                 <div class="row">
