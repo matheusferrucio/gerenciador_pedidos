@@ -4,7 +4,7 @@
     $cnpj = $_GET['cnpj'];
 
     try {
-        $query = $conexao->prepare("SELECT * FROM oficinas WHERE oficinas.cnpj = :cnpj");
+        $query = $conexao->prepare("SELECT * FROM oficinas O WHERE O.cnpj = :cnpj");
 
         $query->execute([
             ":cnpj" => $cnpj 

@@ -99,6 +99,8 @@ nav.sidebar {
         background-color: var(--main);
         height: 50px;
         padding: 5px;
+        border: 2px solid transparent;
+        transition: var(--trans02);
 
         /* formatação do card de perfil na parte inferior da sidebar */
         & a.nav_btn {
@@ -163,6 +165,10 @@ nav.sidebar {
                 color: var(--sidebar);
             }
         }
+    }
+
+    & .perfil:hover {
+        border: 2px solid var(--realce);
     }
 }
 

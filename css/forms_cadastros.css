@@ -105,31 +105,36 @@ main form.form_cadastro_pedido {
         justify-content: center;
 
         & button,
-        a.btnVoltar {
+        a.btnVoltar,
+        a.btnEditar {
             border: none;
             border-radius: 12px;
             background-color: var(--main);
-            padding: 8px 12px;
+            padding: 0 20px;
+            height: 40px;
             cursor: pointer;
             font-weight: 500;
             font-size: 1rem;
             transition: var(--trans03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         & button.btnCadastrar,
-        button.btnConfirmar {
+        button.btnConfirmar,
+        a.btnEditar {
             background-color: var(--realce);
             color: var(--texto-branco);
         }
         & button.btnCadastrar:hover,
-        button.btnConfirmar:hover {
+        button.btnConfirmar:hover,
+        a.btnEditar:hover {
             background-color: var(--realce2);
         }
 
         & a.btnVoltar {
             color: var(--texto);
-            display: flex;
-            align-items: center;
         }
         & a.btnVoltar:hover {
             background-color: var(--borda-card);

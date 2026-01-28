@@ -38,7 +38,7 @@ body div.container .card {
             gap: 5px;
 
             & input {
-                border: 1px solid var(--borda-input);
+                border: 1px solid var(--borda-card);
                 border-radius: 12px;
                 height: 35px;
                 outline: none;

@@ -37,6 +37,8 @@
                 session_start();
 
                 $_SESSION['usuario'] = $linha["cpf"];
+                $_SESSION['nome'] = $linha["nome_usuario"];
+                $_SESSION['cargo'] = (empty($linha["id_cargo"])) ? 'Sem cargo atribuido' : $linha["id_cargo"];
 
                 header("location:".BASE_URL."pages/front/home.php");
                 exit();

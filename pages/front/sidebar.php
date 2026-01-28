@@ -43,13 +43,13 @@
         </ul>
 
         <div class="perfil">
-            <a href="<?= BASE_URL; ?>" class="nav_btn btn_perfil">
+            <a href="<?= BASE_URL; ?>pages/front/perfil_usuario.php" class="nav_btn btn_perfil">
                 <div class="frame_img_perfil">
                     <img src="<?= BASE_URL; ?>images/img_perfil.jpeg" alt="" class="img_perfil">
                 </div>
                 <div class="nome_cargo">
-                    <span class="texto nome_perfil">Matheus</span>
-                    <span class="texto cargo_perfil">Assistente peças</span>
+                    <span class="texto nome_perfil"><?= $_SESSION['nome']; ?></span>
+                    <span class="texto cargo_perfil"><?= $_SESSION['cargo']; ?></span>
                 </div>
             </a>
 

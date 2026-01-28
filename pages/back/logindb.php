@@ -25,6 +25,7 @@
                     session_start();
 
                     $_SESSION['usuario'] = $linha["cpf"];
+                    $_SESSION['nome'] = $linha["nome_usuario"];
 
                     header('location:'.BASE_URL.'pages/front/home.php');
                     exit();

@@ -84,12 +84,12 @@
 
                     <div class="particao">
                         <label for="cepOficina">CEP</label>
-                        <input type="text" name="cepOficina" id="cepOficina" placeholder="Ex: 16052-20" required>
+                        <input type="text" name="cepOficina" id="cepOficina" placeholder="Ex: 16052-20" maxlength="8" required>
                     </div>
                 </div>
 
                 <div class="row">
-                    <a class="btnVoltar" href="<?= BASE_URL; ?>pages/front/listas/lista_seguradoras.php">Voltar</a>
+                    <a class="btnVoltar" href="<?= BASE_URL; ?>pages/front/listas/lista_oficinas.php">Voltar</a>
                     <button type="submit" class="btnCadastrar">Cadastrar</button>
                 </div>
             </form>

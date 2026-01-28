@@ -1,0 +1,40 @@
+.fotoPerfil {
+    flex: 1;
+    
+    & .moldura_foto {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: var(--main);
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+}
+
+.infoUsuario {
+    flex: 4 !important;
+    justify-content: center;
+    gap: 15px !important;
+
+    & .row {
+        flex-direction: column;
+
+        & .particao.nome_usuario {
+            flex: 2;
+        }
+    }
+
+    & .row.column {
+        flex-direction: row;
+    }
+}
+
+.botoes {
+    flex-direction: column;
+    justify-content: center;
+}
